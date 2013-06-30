@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- ^ if you want no numbers on the slides add a "nonumbers" class to the HTML element -->
+<head>
+	<title>Firefox OS and the Web</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/mozilla/styles/style.css">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 {
+			color:#FFF;
+			text-align:center;
+			font-size:40px;
+			}
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#fff;
+			text-align:center;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Firefox OS and the Web</h1>
+		<p>By: Kenneth Ace Sungcaya</p>
+	</header>
+
+	<div class="slide cover w" id="Cover"><div>
+		<section>
+			<header>
+				<h2>Firefox OS and the Web</h2>
+			</header>
+			<img src="pictures/cover.jpg" alt="">
+			<footer class="byline">By: Kenneth Sungcaya</footer>
+		</section>
+	</div></div>
+
+	<div id="who-am-i" class="slide"><div>
+		<section>
+			<header>
+				<h2>Little Kenneth</h2>
+			</header>
+			<img src="pictures/woo.jpg" alt="Little Kenneth" class="right">
+			<ul>
+				<li>
+					<strong>Name: </strong>Kenneth Ace Sungcaya
+					<ul class="inline">
+						<li>Feeling Developer</li>
+						<li>Unemployed</li>
+						<li>Single&hellip;</li>
+					</ul>
+				</li>
+				<li><strong>Age: </strong>(((2 * 8 + (-1)) + 5) * 2) / 2</li>
+				<li><strong>Hobbies: </strong>Watch/Read Tuts, Anime, Dota</li>
+				<li><strong>Height: </strong>1615.44 mm</li>
+			</ul>
+			<small class="credits right">
+				Photo by: <a href="http://www.kjdomanog.com">Kuya Kim!</a>
+			</small>
+			<footer class="notes">
+			</footer>
+		</section>
+	</div></div>
+
+	<div id="what-is-firefox-os" class="slide"><div>
+		<section>
+			<header>
+				<h2>What is Firefox OS?</h2>
+			</header>
+			<p><strong>Firefox OS</strong> (sometimes abbreviated <strong>FxOS)</strong> is a new mobile operating system developed by Mozilla. It uses a Linux kernel and boots into a Gecko-based runtime engine, which lets users run applications developed entirely using HTML, JavaScript, and other open web application APIs.</p>
+
+			<footer class="notes">
+				Introduce yourself, who you are and why you are the person to give that talk
+			</footer>
+
+		</section>
+	</div></div>
+
+	<div class="slide cover w" id="firefox-os-components-detail"><div>
+		<section>
+			<img src="pictures/componentsflame.jpg" class="middle" alt="Gonk, Gecko and Gaia">
+			<small class="credits">
+				<a href="http://www.flickr.com/photos/alesadam/3869366195/">Photo by Alesa Dam</a>
+			</small>
+
+		<footer class="notes">
+			Firefox OS is build with three components: 
+			Gonk is the Linux layer talking to the hardware (the same Android uses)
+			Gecko is the rendering and JavaScript engine (same as Firefox) and
+			Gaia is the interface - everything you see - written in HTML5
+		</footer>
+
+		</section>
+	</div></div>
+
+	<div class="slide shout" id="Shout"><div>
+		<section>
+			<header>
+				<h2>Building Firefox OS Application</h2>
+			</header>
+		</section>
+	</div></div>
+
+	<div id="things-you-need" class="slide"><div>
+		<section>
+			<header>
+				<h2>Things you need&hellip;</h2>
+			</header>
+			<ol>
+				<li>HTML5, CSS3, and Javascript knowledge</li>
+				<li>Some responsive design knowledge</li>
+				<li>Firefox OS Simulator (or if you have a phone..)</li>
+				<li>Foods (while developing..)</li>
+			</ol>
+		<footer class="notes">If you know basci html your good to go! HTML5 did not change anything on html tags it just added some new tags to make your pages more semantic.</footer>
+		</section>
+	</div></div>
+
+	<div id="two-types-of-app" class="slide"><div>
+		<section>
+			<header>
+				<h2>Two types of Firefox OS App</h2>
+			</header>
+			<ul>
+				<li>Hosted App</li>
+				<li>Packaged App</li>
+			</ul>
+		<footer class="notes">Packed apps are essentially a zip file containing all of of an apps assets: HTML, CSS, JavaScript, images, manifest, etc. Hosted apps are run from a server at a given domain, just like a standard website.</footer>
+		</section>
+	</div></div>
+
+	<div id="first-app" class="slide"><div>
+  		<section>
+			<header>
+				<h2>Let's start hacking!</h2>
+			</header>
+  			<pre>
+				<code>&lt;!DOCTYPE html&gt;</code>
+				<code>&lt;html&gt;</code>
+				<code>	&lt;head&gt;</code>
+				<code>		&lt;title&gt;Hello Wolrd!&lt;/title&gt; </code>
+				<code>		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; </code>
+				<code>	&lt;/head&gt;</code>
+				<code>	&lt;body&gt;</code>
+				<code>	&lt;p&gt;Hello world! This is my first app in firefox OS. :)&lt;/p&gt;</code>
+				<code>	&lt;/body&gt;</code>
+				<code>&lt;/html&gt;</code>
+				<code>}</code>
+			</pre>
+			<footer class="notes"></footer>
+	    </section>
+  	</div></div>
+
+	<div id="manifest" class="slide"><div>
+	    <section>
+			<header>
+				<h2>Manifest</h2>
+			</header>
+			<pre>
+				<code>{</code>
+				<code>	"version": "0.1",</code>
+				<code>	"name": "Your App",</code>
+				<code>	"description": "Your new awesome Open Web App",</code>
+				<code>	"launch_path": "/index.html",</code>
+				<code>	"icons": {</code>
+				<code>		"16": "/img/icons/icon-16.png",</code>
+				<code>		"48": "/img/icons/icon-48.png",</code>
+				<code>		"128": "/img/icons/icon-128.png"</code>
+				<code>	},</code>
+				<code>	"developer": {</code>
+				<code>		"name": "Your Name",</code>
+				<code>		"url": "http://yourawesomeapp.com"</code>
+				<code>	},</code>
+				<code>	"default_locale": "en"</code>
+				<code>}</code>
+			</pre>
+			<footer class="notes">Every Firefox app requires an manifest.webapp file at the app root. The manifest.webapp file provides important information about the app, like version, name, description, icon location, locale strings, domains the app can be installed from, and much more (Only the name and description are required). </footer>
+	    </section>
+  	</div></div>
+
+  	<div id="submit-your-app" class="slide"><div>
+		<section>
+			<header>
+				<h2>Ready to submit your app?</h2>
+			</header>
+			<p>Steps..</p>
+			<ol>
+				<li>Log in to the Firefox Marketplace site.</li>
+				<li>Enter information about the app.</li>
+				<li>Optionally, set pricing, payment, and refund options.</li>
+			</ol>
+		<footer class="notes"></footer>
+		</section>
+	</div></div>
+
+	<div id="not-allowed" class="slide"><div>
+		<section>
+			<header>
+				<h2>Not Allowed!</h2>
+			</header>
+			<ol>
+				<li>Remote scripts are banned</li>
+				<li>Inline scripts are banned</li>
+				<li>Plugins are banned</li>
+				<li>Remote styles are banned</li>
+				<li>javascript: URIs are banned</li>
+				<li>&hellip;</li>
+			</ol>
+			<p class="demourl">
+				More details: <a href="https://developer.mozilla.org/docs/Apps/CSP">https://developer.mozilla.org/docs/Apps/CSP</a>
+			</p>    
+		<footer class="notes"></footer>
+		</section>
+	</div></div>
+
+	<div id="more-info" class="slide"><div>
+		<section>
+			<header>
+				<h2>Where to find more info&hellip;</h2>
+			</header>
+			<ul class="longlist">
+				<li><strong>Follow</strong> <a href="http://twitter.com/Boot2Gecko">@Boot2Gecko</a> and <a href="http://twitter.com/mozhacks">@mozhacks</a> on Twitter</li>
+				<li><strong>Join platform mailing list</strong>: <a href="http://groups.google.com/group/mozilla.dev.platform">http://groups.google.com/group/mozilla.dev.platform</a></li>
+				<li><strong>Join in on IRC</strong>: irc.mozilla.org channel #B2G</li>
+				<li><strong>B2G Repo</strong>: <a href="https://github.com/mozilla-b2g/B2G">https://github.com/mozilla-b2g/B2G</a></li>
+				<li><strong>B2G Architecture</strong>: <a href="https://wiki.mozilla.org/B2G/Architecture">https://wiki.mozilla.org/B2G/Architecture</a></li>
+				<li><strong>Gaia Repo</strong>: <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia</a></li>
+				<li><strong>Developer Docs</strong>: <a href="https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko">https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko</a></li>
+				<li><strong>Web API Docs</strong>: <a href="https://wiki.mozilla.org/WebAPI">https://wiki.mozilla.org/WebAPI</a></li>
+			</ul>
+
+		<footer class="notes">
+			There are many ways to keep up to date with Firefox OS/Boot2Gecko. 
+			Here are the most important ones.
+		</footer>
+
+		</section>
+	</div></div>
+
+	<div id="thanks" class="slide"><div>
+		<section>
+			<header>
+				<h2>That's all firefox!</h2>
+			</header>
+			<figure class="frame right swing">
+				<img src="pictures/alab.jpg" alt="that's all firefox">
+			</figure>
+			<p>Contact me..</p>
+				<ul class="follow">
+					<li><strong>FB: </strong><a href="http://fb.com/nekneth">fb.com/nekneth</a></li>
+					<li><strong>Twitter: </strong><a href="http://twitter.com/nekneth">@ksungcaya</a></li>
+					<li><strong>Email: </strong><a href="mailto:ksungcaya@gmail.com">ksungcaya@gmail.com</a></li>
+				</ul>
+			<footer class="notes">
+			</footer>
+		</section>
+	</div></div>
+
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
