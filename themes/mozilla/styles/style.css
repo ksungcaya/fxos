@@ -680,7 +680,7 @@ ul.inline li:last-child::after {
 	text-transform: none;
 }
 #first-app pre {
-	font-size: 19px;
+	font-size: 20px;
 }
 #manifest pre {
 	font-size: 16px;
