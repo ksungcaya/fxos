@@ -1,0 +1,14 @@
+{
+  "name": "Selfie",
+  "description": "About me.",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/assets/icons/60.png",
+    "128": "/assets/icons/128.png"
+  },
+  "developer": {
+    "name": "Kenneth Ace Sungcaya",
+    "url": "http://fb.com/nekneth"
+  },
+  "default_locale": "en"
+}
